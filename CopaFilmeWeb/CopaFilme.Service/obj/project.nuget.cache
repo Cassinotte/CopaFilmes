@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kuLr9jyj0KvPAWmJOadL50bRFECvmhy92AKYDV2KY0Uep7jig8GnQnFIDdOIRG2uUAx/89U4cJoMr8EtOqK58w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -26,7 +26,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ngCopaFilme", "..\ngCopaFil
 		SlnRelativePath = "..\ngCopaFilme\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.Integration", "CopaFilme.Integration\CopaFilme.Integration.csproj", "{B330CD49-3179-4499-AE8F-2858B47E4AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaFilme.Integration", "CopaFilme.Integration\CopaFilme.Integration.csproj", "{B330CD49-3179-4499-AE8F-2858B47E4AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.Service", "CopaFilme.Service\CopaFilme.Service.csproj", "{A4BA8798-C298-45AA-99AA-C45563F2D6FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,10 @@ Global
 		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4BA8798-C298-45AA-99AA-C45563F2D6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BA8798-C298-45AA-99AA-C45563F2D6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BA8798-C298-45AA-99AA-C45563F2D6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BA8798-C298-45AA-99AA-C45563F2D6FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
