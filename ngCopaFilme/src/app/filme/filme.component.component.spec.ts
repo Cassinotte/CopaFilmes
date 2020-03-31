@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FilmeComponentComponent } from './filme-component.component';
+import { FilmeComponentComponent } from './filme.component.component';
 
 describe('FilmeComponentComponent', () => {
   let component: FilmeComponentComponent;
