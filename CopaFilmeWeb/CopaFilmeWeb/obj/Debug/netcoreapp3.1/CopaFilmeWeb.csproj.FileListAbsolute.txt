@@ -2,8 +2,6 @@ C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bi
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.csproj.CoreCompileInputs.cache
-C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.AssemblyInfoInputs.cache
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.AssemblyInfo.cs
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.RazorTargetAssemblyInfo.cache
@@ -23,3 +21,10 @@ C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bi
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilme.Integration.pdb
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.csproj.CopyComplete
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\web.config
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.MvcApplicationPartsAssemblyInfo.cache

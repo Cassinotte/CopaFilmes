@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace CopaFilmeWeb
 {
@@ -27,6 +28,11 @@ namespace CopaFilmeWeb
 		{
 			services.AddControllers();
 			RegisterConteiner(services);
+
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Copa Filme", Version = "v1" });
+			});
 		}
 
 		private void RegisterConteiner(IServiceCollection services)
@@ -47,10 +53,18 @@ namespace CopaFilmeWeb
 
 			app.UseAuthorization();
 
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("v1/swagger.json", "Swagger Movies Demo V1");
+			});
+
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();
 			});
+
+
 		}
 	}
 }
