@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmeServiceService } from './filme.service.service';
 import { FormGroup } from '@angular/forms';
+import { FilmeValidator } from './filme.validator';
 
 @Component({
   selector: 'app-filme-component',
@@ -13,9 +14,15 @@ export class FilmeComponentComponent implements OnInit {
 
   formFilme: FormGroup;
 
-  constructor(private _service: FilmeServiceService) { }
+  constructor(private _service: FilmeServiceService, private _validator: FilmeValidator) { }
 
   ngOnInit(): void {
+
+    this._service.getListFilmes().subscribe(x => {
+
+      this.formFilme = this._validator.buildForm(x);
+
+    })
 
   }
 

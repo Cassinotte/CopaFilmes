@@ -12,9 +12,7 @@ import { IndicacaoSubFormComponent } from './indicacao/indicacao.subForm.compone
 
 
 @NgModule({
-  imports: [
-    CommonModule, routing,
-  ],
+  imports: [ routing ],
   declarations: [FilmeComponentComponent, IndicacaoFormArrayComponent, IndicacaoSubFormComponent],
   providers: [
     FilmeValidator,
