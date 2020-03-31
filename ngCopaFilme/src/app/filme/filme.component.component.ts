@@ -26,6 +26,10 @@ export class FilmeComponentComponent implements OnInit {
 
   }
 
+  enableSubmit() {
+    return this._validator.canSubmitForm(this.formFilme);
+  }
+
   onSubmit() {
 
   }

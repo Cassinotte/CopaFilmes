@@ -15,7 +15,7 @@ export class FilmeServiceService {
 
   public getListFilmes = (): Observable<FilmesResponse[]> => {
 
-    return this.$http.get<FilmesResponse[]>(this.apiEndpoint + '/api/filmes', { observe: "response" })
+    return this.$http.get<FilmesResponse[]>(this.apiEndpoint + '/api/filmes', { observe: "response"})
       .pipe(
         map((res: HttpResponse<FilmesResponse[]>) => (<any>res.body).map(item => new FilmesResponse(item))),
         catchError((error: HttpErrorResponse) => throwError(error))

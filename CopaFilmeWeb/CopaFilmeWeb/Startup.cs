@@ -27,6 +27,7 @@ namespace CopaFilmeWeb
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+
 			RegisterConteiner(services);
 
 			services.AddSwaggerGen(c =>
@@ -50,6 +51,14 @@ namespace CopaFilmeWeb
 			}
 
 			app.UseRouting();
+
+			app.UseCors(x =>
+				x.AllowCredentials()
+				.SetIsOriginAllowed(x => true)
+				.AllowAnyMethod()
+				.AllowAnyHeader()
+				);
+
 
 			app.UseAuthorization();
 

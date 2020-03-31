@@ -15,9 +15,6 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
   ],
   providers: [
     {

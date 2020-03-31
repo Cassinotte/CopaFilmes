@@ -7,12 +7,14 @@ import { routing } from './filme.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { IndicacaoFormArrayComponent } from './indicacao/indicacao.formarray.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndicacaoSubFormComponent } from './indicacao/indicacao.subForm.component';
 
 
 @NgModule({
-  imports: [ routing ],
+  imports: [routing, CommonModule,
+    FormsModule,
+    ReactiveFormsModule ],
   declarations: [FilmeComponentComponent, IndicacaoFormArrayComponent, IndicacaoSubFormComponent],
   providers: [
     FilmeValidator,

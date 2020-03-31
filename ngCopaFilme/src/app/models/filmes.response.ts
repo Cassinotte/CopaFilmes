@@ -6,7 +6,7 @@ export class FilmesResponse {
   public nota: number;
 
   constructor(obj?: any) {
-    this.id = obj?.Nome ?? null
+    this.id = obj?.id ?? null
     this.titulo = obj?.titulo ?? null
     this.ano = obj?.ano ?? 0
     this.nota = obj?.Nome ?? 0

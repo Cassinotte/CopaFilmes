@@ -5,28 +5,35 @@
 
       <h1>Fase de Seleção</h1>
 
-      <p>Selecione {{ maxFilme }} filmes que você deseja que entrem na competição e depois pressione o
-      botão Gerar Meu Campeonato para prosseguir.
+      <p>
+        Selecione {{ maxFilme }} filmes que você deseja que entrem na competição e depois pressione o
+        botão Gerar Meu Campeonato para prosseguir.
       </p>
 
     </div>
   </div>
 
-  <div class="row">
+  <form [formGroup]="formFilme" (ngSubmit)="onSubmit()" *ngIf="formFilme" class="needs-validation">
 
-    <div class="col-4">
-      <p>Selecionados 0 de {{ maxFilme }}</p>
+    <div class="form-row">
+
+      <div class="col-4">
+        <p>Selecionados 0 de {{ maxFilme }}</p>
+      </div>
+
+      <div class="col-6">
+        <button type="submit" class="btn btn-block btn-info" [disabled]="!enableSubmit()">Gerar Meu Campeonato</button>
+      </div>
+
     </div>
 
-    <div class="col-6">
+    <div class="form-row">
 
-      <form [formGroup]="formFilme" (ngSubmit)="onSubmit()" *ngIf="formFilme" class="needs-validation">
 
-      </form>
+      <app-indicacao-formarray [formArray]="formFilme.controls.Filmes"></app-indicacao-formarray>
 
     </div>
-
-  </div>
+  </form>
 
 
 </div>

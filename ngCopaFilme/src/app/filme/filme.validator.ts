@@ -9,6 +9,10 @@ export class FilmeValidator {
 
   }
 
+  canSubmitForm(form: FormGroup) {
+    return form.valid && !form.pristine;
+  }
+
 
   buildForm(filmes: FilmesResponse[]) {
     let fb = this._formBuilder.group({
