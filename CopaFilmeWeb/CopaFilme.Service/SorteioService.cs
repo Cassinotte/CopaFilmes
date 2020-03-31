@@ -47,17 +47,38 @@ namespace CopaFilme.Service
 
         }
 
-        private (FilmesResponse, List<KeyValuePair<FilmesResponse, FilmesResponse>> filme) CalcularVencedor(List<KeyValuePair<FilmesResponse, FilmesResponse>> filme)
+        private FilmesResponse CalcularVencedor(List<KeyValuePair<FilmesResponse, FilmesResponse>> filme)
         {
-            var vencedor = filme.FirstOrDefault();
-            filme.Remove(vencedor);
 
-            if (vencedor.Key.nota > vencedor.Value.nota || vencedor.Key.titulo.CompareTo(vencedor.Value.titulo) > 0)
+            var listaParc = new List<FilmesResponse>();
+
+            foreach (var item in filme)
             {
-                return (vencedor.Key, filme);
+                if (item.Key.nota > item.Value.nota || item.Key.titulo.CompareTo(item.Value.titulo) > 0)
+                {
+                    listaParc.Add(item.Key);
+                }
+                else
+                {
+                    listaParc.Add(item.Value);
+                }
+
             }
 
-            return (vencedor.Value, filme);
+            if (listaParc.Count == 1)
+            { 
+                return listaParc.FirstOrDefault();
+            }
+            else
+            {
+                var x = listaParc.Select((x, i) => new { elemt = x, index = i })
+                    .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, listaParc[x.index + 1]))
+                    .Take((int)listaParc.Count() / 2)
+                    .ToList();
+
+                return CalcularVencedor(x);
+            }
+
 
 
         }
