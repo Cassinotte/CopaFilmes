@@ -2,13 +2,13 @@ import { FilmesResponse } from './filmes.response';
 
 export class VencedorViewModel {
 
-  public Vencedor1: FilmesResponse;
-  public Vencedor2: FilmesResponse;
+  public vencedor1: FilmesResponse;
+  public vencedor2: FilmesResponse;
 
   constructor(obj?: any) {
 
-    this.Vencedor1 = obj?.Vencedor1 ?? null;
-    this.Vencedor2 = obj?.Vencedor2 ?? null;
+    this.vencedor1 = obj?.vencedor1 ?? null;
+    this.vencedor2 = obj?.vencedor2 ?? null;
 
   }
 

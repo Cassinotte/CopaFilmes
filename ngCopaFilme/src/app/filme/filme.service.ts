@@ -26,9 +26,9 @@ export class FilmeService {
 
    
   public postInitCopa = (ids: string[]): Observable<VencedorViewModel> => {
-    return this.$http.post<VencedorViewModel>(this.apiEndpoint + 'api/filmes/copaInitial', JSON.stringify(ids), { observe: "response" })
+    return this.$http.post<VencedorViewModel>(this.apiEndpoint + '/api/filmes/copaInitial', ids, { observe: "response" })
       .pipe(
-        map((res: HttpResponse<VencedorViewModel>) => new VencedorViewModel(res)),
+        map((res: HttpResponse<VencedorViewModel>) => new VencedorViewModel(res.body)),
         catchError((error: HttpErrorResponse) => throwError(error))
       );
   }
