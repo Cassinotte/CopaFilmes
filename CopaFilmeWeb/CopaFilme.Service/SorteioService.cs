@@ -10,7 +10,7 @@ namespace CopaFilme.Service
 
     public interface ISorteioService
     {
-
+        Task<FilmesResponse> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct);
     }
 
     public class SorteioService : ISorteioService
@@ -23,7 +23,7 @@ namespace CopaFilme.Service
             CopaFilmeBase = copaFilmeBase;
         }
 
-        public async Task GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct )
+        public async Task<FilmesResponse> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct )
         {
 
             if ( idsFilmes.Length % 2 != 0)
@@ -40,11 +40,12 @@ namespace CopaFilme.Service
             // Fazer com que os filmes disputem em eliminatórias da seguinte forma: o filme na primeira
             // posição disputará contra o da última posição, o segundo com o penúltimo
             var selecaoPrincipal = selecao.Select((x, i) => new { elemt = x, index = i })
+                .Take((int)idsFilmes.Length / 2)
                 .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt,selecao[idsFilmes.Length - x.index]))
-                .Take((int)idsFilmes.Length / 2);
+                .ToList()
 
             // Fase de Eliminatórias
-
+            return CalcularVencedor(selecaoPrincipal);
         }
 
         private FilmesResponse CalcularVencedor(List<KeyValuePair<FilmesResponse, FilmesResponse>> filme)
@@ -72,8 +73,8 @@ namespace CopaFilme.Service
             else
             {
                 var x = listaParc.Select((x, i) => new { elemt = x, index = i })
-                    .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, listaParc[x.index + 1]))
                     .Take((int)listaParc.Count() / 2)
+                    .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, listaParc[x.index + 1]))
                     .ToList();
 
                 return CalcularVencedor(x);
