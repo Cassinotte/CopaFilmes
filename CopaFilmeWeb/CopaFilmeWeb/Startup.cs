@@ -28,6 +28,7 @@ namespace CopaFilmeWeb
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+			services.AddCors();
 
 			RegisterConteiner(services);
 
@@ -54,12 +55,9 @@ namespace CopaFilmeWeb
 
 			app.UseRouting();
 
-			app.UseCors(x =>
-				x.AllowCredentials()
-				.SetIsOriginAllowed(x => true)
-				.AllowAnyMethod()
-				.AllowAnyHeader()
-				);
+			app.UseCors(
+				options => options.SetIsOriginAllowed(x => _ = true).AllowAnyMethod().AllowAnyHeader().AllowCredentials()
+			);
 
 
 			app.UseAuthorization();

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmeServiceService } from './filme.service.service';
+import { FilmeService} from './filme.service';
 import { FormGroup } from '@angular/forms';
 import { FilmeValidator } from './filme.validator';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-filme-component',
@@ -14,7 +15,8 @@ export class FilmeComponentComponent implements OnInit {
 
   formFilme: FormGroup;
 
-  constructor(private _service: FilmeServiceService, private _validator: FilmeValidator) { }
+  constructor(private _service: FilmeService, private _validator: FilmeValidator,
+    private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -37,6 +39,8 @@ export class FilmeComponentComponent implements OnInit {
   onSubmit() {
 
     let dados = this._validator.getFormCheck(this.formFilme);
+
+    this._router.navigate(['confirmacao', dados.join(";")], { relativeTo: this._route });
 
   }
 

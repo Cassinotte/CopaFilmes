@@ -4,11 +4,12 @@ import { Observable, throwError } from 'rxjs';
 import { FilmesResponse } from '../models/filmes.response';
 
 import { map, catchError } from 'rxjs/operators'
+import { VencedorViewModel } from '../models/vencedor.viewmodel';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilmeServiceService {
+export class FilmeService {
 
   constructor(private $http: HttpClient,
     @Inject('ApiEndpoint') private apiEndpoint: string) { }
@@ -21,6 +22,15 @@ export class FilmeServiceService {
         catchError((error: HttpErrorResponse) => throwError(error))
       );
 
+  }
+
+   
+  public postInitCopa = (ids: string[]): Observable<VencedorViewModel> => {
+    return this.$http.post<VencedorViewModel>(this.apiEndpoint + 'api/filmes/copaInitial', JSON.stringify(ids), { observe: "response" })
+      .pipe(
+        map((res: HttpResponse<VencedorViewModel>) => new VencedorViewModel(res)),
+        catchError((error: HttpErrorResponse) => throwError(error))
+      );
   }
 
 }
