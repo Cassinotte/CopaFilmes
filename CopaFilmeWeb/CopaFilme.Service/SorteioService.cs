@@ -80,7 +80,7 @@ namespace CopaFilme.Service
                 }
 
                 var x = listaParc.Select((x, i) => new { elemt = x, index = i })
-                    .Take((int)listaParc.Count() / 2)
+                    .Where(x => x.index % 2 == 0)
                     .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, listaParc[x.index + 1]))
                     .ToList();
 

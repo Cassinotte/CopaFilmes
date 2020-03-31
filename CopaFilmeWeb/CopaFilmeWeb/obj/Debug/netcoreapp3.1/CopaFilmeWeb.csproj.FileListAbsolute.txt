@@ -28,3 +28,5 @@ C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\ob
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.dll
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.pdb
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.genruntimeconfig.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilme.Service.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilme.Service.pdb

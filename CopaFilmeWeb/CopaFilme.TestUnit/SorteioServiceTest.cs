@@ -49,7 +49,7 @@ namespace CopaFilme.TestUnit
             var retorno = await sorteioService.GetVencedorCopaFilme(lista.Select(x => x.id).ToArray(), CancellationToken.None) ;
 
             Assert.Equal("Vingadores: Guerra Infinita", retorno.Key.titulo);
-            Assert.Equal("Os Incríveis 2", retorno.Key.titulo);
+            Assert.Equal("Os Incríveis 2", retorno.Value.titulo);
 
         }
     }
