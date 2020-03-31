@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5amWMm1z322Gcm7evgxSUYRWaG2/M98nBsplS+bWwuQ71MOIIqTQ0SObWV5YRtFD/bLUkQuedNDHRX5t/6LGA==",
+  "dgSpecHash": "YEJIUPamPwMaKCJ3L4fbXhIoJRYFI/A+v/RLXrQE27d8erkFiOhcxBX5xDk2E256fUgqzZ2ja6HSSQBP/d9XyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilmeWeb\\CopaFilmeWeb.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

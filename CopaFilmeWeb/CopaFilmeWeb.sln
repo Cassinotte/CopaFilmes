@@ -26,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ngCopaFilme", "..\ngCopaFil
 		SlnRelativePath = "..\ngCopaFilme\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.Integration", "CopaFilme.Integration\CopaFilme.Integration.csproj", "{B330CD49-3179-4499-AE8F-2858B47E4AA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{2F1526B2-6167-4393-9CD1-B15EAA621F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1526B2-6167-4393-9CD1-B15EAA621F9F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F1526B2-6167-4393-9CD1-B15EAA621F9F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B330CD49-3179-4499-AE8F-2858B47E4AA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

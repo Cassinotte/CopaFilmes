@@ -10,19 +10,6 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
-      },
-      "CopaFilme.Integration/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "bin/placeholder/CopaFilme.Integration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CopaFilme.Integration.dll": {}
-        }
       }
     }
   },
@@ -57,16 +44,11 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
-    },
-    "CopaFilme.Integration/1.0.0": {
-      "type": "project",
-      "path": "../CopaFilme.Integration/CopaFilme.Integration.csproj",
-      "msbuildProject": "../CopaFilme.Integration/CopaFilme.Integration.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "CopaFilme.Integration >= 1.0.0"
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -76,11 +58,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilmeWeb\\CopaFilmeWeb.csproj",
-      "projectName": "CopaFilmeWeb",
-      "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilmeWeb\\CopaFilmeWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj",
+      "projectName": "CopaFilme.Integration",
+      "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj",
       "packagesPath": "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilmeWeb\\obj\\",
+      "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -98,11 +80,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj": {
-              "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -113,6 +91,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -124,9 +108,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

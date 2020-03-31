@@ -1,0 +1,9 @@
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\bin\Debug\netcoreapp3.1\CopaFilme.Integration.deps.json
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\bin\Debug\netcoreapp3.1\CopaFilme.Integration.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.csprojAssemblyReference.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.AssemblyInfoInputs.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.AssemblyInfo.cs
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\bin\Debug\netcoreapp3.1\CopaFilme.Integration.pdb
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.Integration\obj\Debug\netcoreapp3.1\CopaFilme.Integration.pdb

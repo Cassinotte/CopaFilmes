@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CopaFilme.Integration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,13 @@ namespace CopaFilmeWeb
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+			RegisterConteiner(services);
+		}
+
+		private void RegisterConteiner(IServiceCollection services)
+		{
+			services.AddHttpClient<ICopaFilmeBase, CopaFilmeBase>();
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

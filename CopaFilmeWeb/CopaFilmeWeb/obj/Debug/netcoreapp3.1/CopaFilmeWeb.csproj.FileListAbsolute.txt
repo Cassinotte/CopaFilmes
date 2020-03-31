@@ -18,3 +18,8 @@ C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bi
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilmeWeb.pdb
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.csprojAssemblyReference.cache
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.genruntimeconfig.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilme.Integration.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\CopaFilme.Integration.pdb
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\obj\Debug\netcoreapp3.1\CopaFilmeWeb.csproj.CopyComplete
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilmeWeb\bin\Debug\netcoreapp3.1\web.config
