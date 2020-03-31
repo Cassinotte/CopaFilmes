@@ -1,2 +1,2 @@
-# CopaFilmes
-CopaFilmes - Teste Técnico 
+# Copa Filmes
+Copa Filmes - Teste Técnico 
