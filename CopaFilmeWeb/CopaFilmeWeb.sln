@@ -23,6 +23,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ngCopaFilme", "..\ngCopaFil
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "50664"
+		SlnRelativePath = "..\ngCopaFilme\"
 	EndProjectSection
 EndProject
 Global
