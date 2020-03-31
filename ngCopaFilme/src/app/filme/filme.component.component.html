@@ -1,33 +1,35 @@
-<div class="container-fluid">
-  <div class="row text-center">
-    <div class="col">
-      <p class="text-uppercase">Campeonato de Filmes</p>
+<div class="container">
+  <div class="card text-center text-white bg-secondary mt-5">
+    <div class="card-body">
 
-      <h1>Fase de Seleção</h1>
+      <p class="text-uppercase pt-4">Campeonato de Filmes</p>
 
-      <p>
+      <h3>Fase de Seleção</h3>
+
+      <p class="pt-4 ml-3 mr-3">
         Selecione {{ maxFilme }} filmes que você deseja que entrem na competição e depois pressione o
         botão Gerar Meu Campeonato para prosseguir.
       </p>
+
 
     </div>
   </div>
 
   <form [formGroup]="formFilme" (ngSubmit)="onSubmit()" *ngIf="formFilme" class="needs-validation">
 
-    <div class="form-row">
+    <div class="row justify-content-between pt-2">
 
-      <div class="col-4">
-        <p>Selecionados {{ countCheck() }} de {{ maxFilme }}</p>
+      <div class="col-2">
+        <p class="font-weight-bold text-white">Selecionados {{ countCheck() }} de {{ maxFilme }} filmes</p>
       </div>
 
-      <div class="col-6">
-        <button type="submit" class="btn btn-block btn-info" [disabled]="!enableSubmit()">Gerar Meu Campeonato</button>
+      <div class="col-3">
+        <button type="submit" class="btn btn-block btn-info rounded-0" [disabled]="!enableSubmit()">Gerar Meu Campeonato</button>
       </div>
 
     </div>
 
-    <div class="form-row">
+    <div class="row pt-5">
 
 
       <app-indicacao-formarray [formArray]="formFilme.controls.Filmes"></app-indicacao-formarray>
