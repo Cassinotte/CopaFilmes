@@ -13,13 +13,25 @@ export class FilmeValidator {
     return form.valid && !form.pristine;
   }
 
-  countCheck(form: FormGroup) {
+  private getFormArray(form: FormGroup) {
     let formarray = <FormArray>form.get("Filmes");
 
-    return formarray.controls.map(control => control.value).filter(x => x.check).length;
+    return formarray.controls.map(control => control.value).filter(x => x.check);
+  }
+
+  countCheck(form: FormGroup) {
+    return this.getFormArray(form).length;
 
   }
 
+  getFormCheck(form: FormGroup) : string[] {
+
+    if (form.dirty && form.valid) {
+
+      return this.getFormArray(form).map(x => x.id);
+
+    }
+  }
 
   buildForm(filmes: FilmesResponse[]) {
     let fb = this._formBuilder.group({

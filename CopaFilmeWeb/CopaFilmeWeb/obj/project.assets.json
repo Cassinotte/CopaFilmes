@@ -97,6 +97,19 @@
         "runtime": {
           "bin/placeholder/CopaFilme.Integration.dll": {}
         }
+      },
+      "CopaFilme.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CopaFilme.Integration": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CopaFilme.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CopaFilme.Service.dll": {}
+        }
       }
     }
   },
@@ -237,11 +250,17 @@
       "type": "project",
       "path": "../CopaFilme.Integration/CopaFilme.Integration.csproj",
       "msbuildProject": "../CopaFilme.Integration/CopaFilme.Integration.csproj"
+    },
+    "CopaFilme.Service/1.0.0": {
+      "type": "project",
+      "path": "../CopaFilme.Service/CopaFilme.Service.csproj",
+      "msbuildProject": "../CopaFilme.Service/CopaFilme.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "CopaFilme.Integration >= 1.0.0",
+      "CopaFilme.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.2.1"
     ]
   },
@@ -277,6 +296,9 @@
           "projectReferences": {
             "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj": {
               "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj"
+            },
+            "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj": {
+              "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj"
             }
           }
         }

@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CopaFilme.Integration\CopaFilme.Integration.csproj" />
+    <ProjectReference Include="..\CopaFilme.Service\CopaFilme.Service.csproj" />
   </ItemGroup>
 
 

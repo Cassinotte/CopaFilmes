@@ -36,6 +36,8 @@ export class FilmeComponentComponent implements OnInit {
 
   onSubmit() {
 
+    let dados = this._validator.getFormCheck(this.formFilme);
+
   }
 
 }

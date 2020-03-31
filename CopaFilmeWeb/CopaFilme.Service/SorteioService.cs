@@ -10,7 +10,7 @@ namespace CopaFilme.Service
 
     public interface ISorteioService
     {
-        Task<FilmesResponse> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct);
+        Task<KeyValuePair<FilmesResponse, FilmesResponse>> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct);
     }
 
     public class SorteioService : ISorteioService
@@ -23,7 +23,7 @@ namespace CopaFilme.Service
             CopaFilmeBase = copaFilmeBase;
         }
 
-        public async Task<FilmesResponse> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct )
+        public async Task<KeyValuePair<FilmesResponse, FilmesResponse>> GetVencedorCopaFilme(string[] idsFilmes, CancellationToken ct )
         {
 
             if ( idsFilmes.Length % 2 != 0)
@@ -41,37 +41,44 @@ namespace CopaFilme.Service
             // posição disputará contra o da última posição, o segundo com o penúltimo
             var selecaoPrincipal = selecao.Select((x, i) => new { elemt = x, index = i })
                 .Take((int)idsFilmes.Length / 2)
-                .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, selecao[idsFilmes.Length - x.index]))
+                .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, selecao[(idsFilmes.Length - 1) - x.index]))
                 .ToList();
 
             // Fase de Eliminatórias
             return CalcularVencedor(selecaoPrincipal);
         }
 
-        private FilmesResponse CalcularVencedor(List<KeyValuePair<FilmesResponse, FilmesResponse>> filme)
+        private KeyValuePair<FilmesResponse, FilmesResponse> CalcularVencedor(List<KeyValuePair<FilmesResponse, FilmesResponse>> filme)
         {
-
-            var listaParc = new List<FilmesResponse>();
-
-            foreach (var item in filme)
+            if (filme.Count == 1)
             {
-                if (item.Key.nota > item.Value.nota || item.Key.titulo.CompareTo(item.Value.titulo) > 0)
-                {
-                    listaParc.Add(item.Key);
-                }
-                else
-                {
-                    listaParc.Add(item.Value);
-                }
+                var ultimoItel = filme.LastOrDefault();
+                FilmesResponse filmeOne = ultimoItel.Key, filmeTwo = ultimoItel.Value;
 
-            }
-
-            if (listaParc.Count == 1)
-            { 
-                return listaParc.FirstOrDefault();
+                if (!CheckVencedor(ultimoItel))
+                {
+                    new KeyValuePair<FilmesResponse, FilmesResponse>(filmeTwo, filmeOne);
+                }
+                
+                return new KeyValuePair<FilmesResponse, FilmesResponse>(filmeOne, filmeTwo);
             }
             else
             {
+                var listaParc = new List<FilmesResponse>();
+
+                foreach (var item in filme)
+                {
+                    if (CheckVencedor(item))
+                    {
+                        listaParc.Add(item.Key);
+                    }
+                    else
+                    {
+                        listaParc.Add(item.Value);
+                    }
+
+                }
+
                 var x = listaParc.Select((x, i) => new { elemt = x, index = i })
                     .Take((int)listaParc.Count() / 2)
                     .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, listaParc[x.index + 1]))
@@ -84,5 +91,9 @@ namespace CopaFilme.Service
 
         }
 
+        private static bool CheckVencedor(KeyValuePair<FilmesResponse, FilmesResponse> item)
+        {
+            return item.Key.nota > item.Value.nota || item.Key.titulo.CompareTo(item.Value.titulo) > 0;
+        }
     }
 }

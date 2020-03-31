@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CopaFilme.Integration;
+using CopaFilme.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,7 @@ namespace CopaFilmeWeb
 		{
 			services.AddHttpClient<ICopaFilmeBase, CopaFilmeBase>();
 
+			services.AddScoped<ISorteioService, SorteioService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -93,3 +93,10 @@ C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestU
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\obj\Debug\netcoreapp3.1\CopaFilme.TestUnit.dll
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\obj\Debug\netcoreapp3.1\CopaFilme.TestUnit.pdb
 C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\obj\Debug\netcoreapp3.1\CopaFilme.TestUnit.genruntimeconfig.cache
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\CopaFilme.Integration.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\CopaFilme.Service.dll
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\CopaFilme.Service.pdb
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\bin\Debug\netcoreapp3.1\CopaFilme.Integration.pdb
+C:\Users\Eduardo Cassinotte\source\repos\CopaFilmes\CopaFilmeWeb\CopaFilme.TestUnit\obj\Debug\netcoreapp3.1\CopaFilme.TestUnit.csproj.CoreCompileInputs.cache
