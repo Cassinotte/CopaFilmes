@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 import { FilmesResponse } from '../models/filmes.response';
 
 @Injectable()
@@ -11,6 +11,13 @@ export class FilmeValidator {
 
   canSubmitForm(form: FormGroup) {
     return form.valid && !form.pristine;
+  }
+
+  countCheck(form: FormGroup) {
+    let formarray = <FormArray>form.get("Filmes");
+
+    return formarray.controls.map(control => control.value).filter(x => x.check).length;
+
   }
 
 
