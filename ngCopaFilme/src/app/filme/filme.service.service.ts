@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http'
+import { Observable, throwError } from 'rxjs';
+import { FilmesResponse } from '../models/filmes.response';
+
+import { map, catchError } from 'rxjs/operators'
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FilmeServiceService {
+
+  constructor(private $http: HttpClient) { }
+
+  public getListFilmes = (): Observable<FilmesResponse[]> => {
+
+    return this.$http.get<FilmesResponse[]>('http://localhost/CopaFilmeWeb/api/filmes', { observe: "response" })
+      .pipe(
+        map((res: HttpResponse<FilmesResponse[]>) => (<any>res.body).map(item => new FilmesResponse(item))),
+        catchError((error: HttpErrorResponse) => throwError(error))
+      );
+
+  }
+
+}
