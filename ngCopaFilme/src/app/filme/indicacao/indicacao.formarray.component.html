@@ -1,0 +1,5 @@
+<div class="form-group row">
+  <div class="col" *ngFor="let model of formArray.controls; let i = index">
+    <app-indicacao-subform [model]="model"></app-indicacao-subform>
+  </div>
+</div>

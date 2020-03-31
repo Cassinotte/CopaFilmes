@@ -25,6 +25,7 @@ export class FilmeValidator {
     let retorno: FormGroup[];
 
     retorno = filmes.map(x => this._formBuilder.group({
+      "check": [false, []],
       "id": [x.id, []],
       "titulo": [x.titulo, []],
       "ano": [x.ano, []],

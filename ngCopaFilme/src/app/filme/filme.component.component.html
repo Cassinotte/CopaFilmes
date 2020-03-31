@@ -1,1 +1,32 @@
-<p>filme-component works!</p>
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col">
+      <p class="text-uppercase">Campeonato de Filmes</p>
+
+      <h1>Fase de Seleção</h1>
+
+      <p>Selecione {{ maxFilme }} filmes que você deseja que entrem na competição e depois pressione o
+      botão Gerar Meu Campeonato para prosseguir.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-4">
+      <p>Selecionados 0 de {{ maxFilme }}</p>
+    </div>
+
+    <div class="col-6">
+
+      <form [formGroup]="formFilme" (ngSubmit)="onSubmit()" *ngIf="formFilme" class="needs-validation">
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>
