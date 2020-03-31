@@ -4,14 +4,14 @@
     "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj": {
+    "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj",
-        "projectName": "CopaFilme.TestUnit",
-        "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj",
+        "projectName": "CopaFilme.Integration",
+        "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj",
         "packagesPath": "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,9 +41,137 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj",
+        "projectName": "CopaFilme.Service",
+        "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj",
+        "packagesPath": "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Eduardo Cassinotte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj": {
+                "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Integration\\CopaFilme.Integration.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj",
+        "projectName": "CopaFilme.TestUnit",
+        "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\CopaFilme.TestUnit.csproj",
+        "packagesPath": "C:\\Users\\Eduardo Cassinotte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.TestUnit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Eduardo Cassinotte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj": {
+                "projectPath": "C:\\Users\\Eduardo Cassinotte\\source\\repos\\CopaFilmes\\CopaFilmeWeb\\CopaFilme.Service\\CopaFilme.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
             },
             "coverlet.collector": {
               "target": "Package",
