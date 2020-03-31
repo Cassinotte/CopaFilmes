@@ -41,8 +41,8 @@ namespace CopaFilme.Service
             // posição disputará contra o da última posição, o segundo com o penúltimo
             var selecaoPrincipal = selecao.Select((x, i) => new { elemt = x, index = i })
                 .Take((int)idsFilmes.Length / 2)
-                .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt,selecao[idsFilmes.Length - x.index]))
-                .ToList()
+                .Select(x => new KeyValuePair<FilmesResponse, FilmesResponse>(x.elemt, selecao[idsFilmes.Length - x.index]))
+                .ToList();
 
             // Fase de Eliminatórias
             return CalcularVencedor(selecaoPrincipal);
