@@ -10,12 +10,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndicacaoSubFormComponent } from './indicacao/indicacao.subForm.component';
 import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
   imports: [routing, CommonModule,
     FormsModule,
-    ReactiveFormsModule ],
+    ReactiveFormsModule,
+    SharedModule],
   declarations: [FilmeComponentComponent, IndicacaoFormArrayComponent, IndicacaoSubFormComponent, ConfirmacaoComponent],
   providers: [
     FilmeValidator,
