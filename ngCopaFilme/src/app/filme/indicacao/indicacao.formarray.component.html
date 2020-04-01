@@ -1,5 +1,7 @@
 <div class="row row-cols-4">
-  <div class="col bg-white" *ngFor="let model of formArray.controls; let i = index">
-    <app-indicacao-subform [model]="model"></app-indicacao-subform>
+  <div class="col" *ngFor="let model of formArray.controls; let i = index">
+    <div class="bg-white border border-secondary mr-1 mb-1">
+      <app-indicacao-subform [model]="model" [index]="i"></app-indicacao-subform>
+    </div>
   </div>
 </div>

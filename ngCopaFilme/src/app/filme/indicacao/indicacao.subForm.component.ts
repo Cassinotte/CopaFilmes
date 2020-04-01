@@ -12,6 +12,9 @@ export class IndicacaoSubFormComponent implements OnInit {
   @Input()
   model: FormGroup
 
+  @Input()
+  index: number;
+
   ngOnInit(): void {
 
   }

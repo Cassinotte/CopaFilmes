@@ -1,11 +1,16 @@
 <form [formGroup]="model" class="needs-validation">
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" formControlName="check">
-    <label class="form-check-label" for="defaultCheck1">
-      <p class="font-weight-bold">{{ model.value.titulo }}</p>
-      {{ model.value.ano }}
-    </label>
+  <div class="bg-white p-3">
+
+    <div class="chiller_cb">
+      <input attr.id="filmeCh{{index}}" type="checkbox" formControlName="check">
+      <label attr.for="filmeCh{{index}}">
+        {{ model.value.titulo }}
+        {{ model.value.ano }}
+      </label>
+      <span></span>
+    </div>
+   
   </div>
 
 </form>
