@@ -1,4 +1,36 @@
-<p>Resultado Final</p>
+<div class="container">
+  <div class="card text-center text-white bg-secondary mt-5">
+    <div class="card-body">
 
-<p>{{vencedores?.vencedor1.titulo }}</p>
-<p>{{vencedores?.vencedor2.titulo }}</p>
+      <p class="text-uppercase pt-4">Campeonato de Filmes</p>
+
+      <h3>Resultado Final</h3>
+
+      <hr class="border-white w-25"/>
+
+      <p class="pt-4 ml-3 mr-3">
+        Veja o resultado final do Campeonato de Filmes de forma simples e rápida
+      </p>
+
+
+    </div>
+  </div>
+  <p></p>
+
+  <ng-container *ngTemplateOutlet="POSICAO;context: {$implicit:'1º', b:vencedores?.vencedor1.titulo}"></ng-container>
+
+  <ng-container *ngTemplateOutlet="POSICAO;context: {$implicit:'2º', b:vencedores?.vencedor2.titulo}"></ng-container>
+
+</div>
+
+<ng-template #POSICAO let-position let-name="b">
+
+  <div class="row pt-2">
+    <div class="col-1 bg-secondary">
+      <p class="text-white pt-4">{{ position }}</p>
+    </div>
+    <div class="col bg-white pt-4">
+      <p> {{ name }}</p>
+    </div>
+  </div>
+</ng-template>
