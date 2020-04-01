@@ -17,14 +17,9 @@ export class ExceptionService {
     catchBadResponse: (errorResponse: HttpErrorResponse) => void = (errorResponse: HttpErrorResponse) => {
         console.log(errorResponse);
         var httperror = <HttpError>errorResponse.error;
-        for (let state in httperror.errors) {
-            if (httperror.errors[state]) {
-                for (let message of httperror.errors[state]) {
-                    this._toastService.error('Ocorreu um erro.', message);
-                }
-            }
-        }
-        return;// Observable.throw(errorResponse);
+
+      this._toastService.error('Ocorreu um erro.', httperror.Message);
+
     }
 }
 
