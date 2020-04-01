@@ -28,9 +28,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ngCopaFilme", "..\ngCopaFil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaFilme.Integration", "CopaFilme.Integration\CopaFilme.Integration.csproj", "{B330CD49-3179-4499-AE8F-2858B47E4AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.Service", "CopaFilme.Service\CopaFilme.Service.csproj", "{A4BA8798-C298-45AA-99AA-C45563F2D6FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaFilme.Service", "CopaFilme.Service\CopaFilme.Service.csproj", "{A4BA8798-C298-45AA-99AA-C45563F2D6FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.TestUnit", "CopaFilme.TestUnit\CopaFilme.TestUnit.csproj", "{2B460926-63CB-4F16-88F6-02FEC64E9633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaFilme.TestUnit", "CopaFilme.TestUnit\CopaFilme.TestUnit.csproj", "{2B460926-63CB-4F16-88F6-02FEC64E9633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilme.TesteAutomatizado", "CopaFilme.TesteAutomatizado\CopaFilme.TesteAutomatizado.csproj", "{FB426325-04A8-403D-99A4-A83E7F290AC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{2B460926-63CB-4F16-88F6-02FEC64E9633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B460926-63CB-4F16-88F6-02FEC64E9633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B460926-63CB-4F16-88F6-02FEC64E9633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB426325-04A8-403D-99A4-A83E7F290AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB426325-04A8-403D-99A4-A83E7F290AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB426325-04A8-403D-99A4-A83E7F290AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB426325-04A8-403D-99A4-A83E7F290AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
