@@ -40,7 +40,9 @@ export class FilmeComponentComponent implements OnInit {
 
     let dados = this._validator.getFormCheck(this.formFilme);
 
-    this._router.navigate(['confirmacao', dados.join(";")], { relativeTo: this._route });
+    if (dados) {
+      this._router.navigate(['confirmacao', dados.join(";")], { relativeTo: this._route });
+    }
 
   }
 

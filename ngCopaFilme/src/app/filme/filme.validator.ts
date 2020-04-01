@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, FormArray, AbstractControl, ValidatorFn } from '@angular/forms';
 import { FilmesResponse } from '../models/filmes.response';
+import { ToastService } from '../../shared/toast/toast.service';
 
 @Injectable()
 export class FilmeValidator {
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder, private _toastService: ToastService) {
 
   }
 
   canSubmitForm(form: FormGroup) {
-    return form.valid && !form.pristine;
+    return /*form.valid;  && */ !form.pristine;
   }
 
-  private getFormArray(form: FormGroup) {
-    let formarray = <FormArray>form.get("Filmes");
+  private getFormArray(form: FormGroup, formArray?: FormArray) {
+    let formarray = formArray ?? <FormArray>form.get("Filmes");
 
     return formarray.controls.map(control => control.value).filter(x => x.check);
   }
@@ -24,19 +25,30 @@ export class FilmeValidator {
 
   }
 
-  getFormCheck(form: FormGroup) : string[] {
+  getFormCheck(form: FormGroup) : string[] | null {
 
     if (form.dirty && form.valid) {
 
       return this.getFormArray(form).map(x => x.id);
 
     }
+    else {
+
+      let errors = form.get("Filmes").errors;
+
+      for (let key in errors) {
+        this._toastService.alert("Validação", errors[key]);
+      }
+
+      return null;
+    }
   }
 
   buildForm(filmes: FilmesResponse[]) {
     let fb = this._formBuilder.group({
 
-      "Filmes": this._formBuilder.array(this.buildFormArray(filmes))
+      "Filmes": this._formBuilder.array(this.buildFormArray(filmes),
+        [this.checkEmpty(), this.checkLimit(), this.CheckExact()])
 
     });
 
@@ -57,6 +69,29 @@ export class FilmeValidator {
 
     return retorno;
 
+  }
+
+  protected checkEmpty(): ValidatorFn {
+    return (formArray: FormArray): { [key: string]: any } | null => {
+
+      return this.getFormArray(null, formArray).length ? null : { empty: 'Selecione ao menos um elemento' } ;
+    }
+  }
+
+  protected checkLimit(): ValidatorFn {
+
+    return (formArray: FormArray): { [key: string]: any } | null => {
+
+      return this.getFormArray(null, formArray).length > 8 ? { limit: 'Excedeu limite de seleção' } : null;
+    }
+  }
+
+  protected CheckExact(): ValidatorFn {
+
+    return (formArray: FormArray): { [key: string]: any } | null => {
+
+      return this.getFormArray(null, formArray).length === 8 ? null : { exact: 'Selecione exatamente 8 filmes' } ;
+    }
   }
 
 }
