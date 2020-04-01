@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CopaFilme.Integration;
 using CopaFilme.Service;
+using CopaFilmeWeb.Mapper;
 using CopaFilmeWeb.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +46,8 @@ namespace CopaFilmeWeb
             services.AddHttpClient<ICopaFilmeBase, CopaFilmeBase>();
 
             services.AddScoped<ISorteioService, SorteioService>();
+
+            services.AddScoped<IMapper>(_ => AutoMapperConfig.Config());
         }
 
 

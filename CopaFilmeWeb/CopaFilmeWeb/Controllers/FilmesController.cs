@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using CopaFilme.Integration;
 using CopaFilme.Service;
+using CopaFilmeWeb.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,25 +19,30 @@ namespace CopaFilmeWeb.Controllers
 	{
 		private readonly ICopaFilmeBase _copaFilmeBase;
 		private readonly ISorteioService _sorteioService;
+		private readonly IMapper _mapper;
 
 		private readonly ILogger<FilmesController> _logger;
 
 		public FilmesController(ICopaFilmeBase copaFilmeBase, ISorteioService sorteioService, 
-								ILogger<FilmesController> logger)
+								ILogger<FilmesController> logger, IMapper mapper)
 		{
 			_copaFilmeBase = copaFilmeBase;
 			_sorteioService = sorteioService;
 			_logger = logger;
+
+			_mapper = mapper;
 		}
 
 		[HttpGet]
-		[ProducesResponseType(typeof(IEnumerable<FilmesResponse>), StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof(IEnumerable<FilmeViewModel>), StatusCodes.Status200OK)]
 		[ProducesDefaultResponseType]
 		public async Task<IActionResult> Get(CancellationToken ct)
 		{
 			var retorno = await _copaFilmeBase.GetFilmesAsync(ct);
 
-			return Ok(retorno.OrderBy(x => x.titulo));
+			var map = _mapper.Map<IEnumerable<FilmeViewModel>>(retorno);
+
+			return Ok(map.OrderBy(x => x.titulo));
 		}
 
 		[HttpPost("copaInitial")]
