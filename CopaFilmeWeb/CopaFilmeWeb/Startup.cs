@@ -7,6 +7,7 @@ using CopaFilme.Integration;
 using CopaFilme.Service;
 using CopaFilmeWeb.Mapper;
 using CopaFilmeWeb.Middleware;
+using CopaFilmeWeb.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace CopaFilmeWeb
@@ -39,6 +41,8 @@ namespace CopaFilmeWeb
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Copa Filme", Version = "v1" });
             });
+
+            services.Configure<ApiLamb>(Configuration.GetSection("ApiLamb"));
         }
 
         private void RegisterConteiner(IServiceCollection services)
@@ -46,6 +50,8 @@ namespace CopaFilmeWeb
             services.AddHttpClient<ICopaFilmeBase, CopaFilmeBase>();
 
             services.AddScoped<ISorteioService, SorteioService>();
+
+            services.AddScoped<UrlApi>(x => new UrlApi(x.GetService<IOptions<ApiLamb>>().Value.Url));
 
             services.AddScoped<IMapper>(_ => AutoMapperConfig.Config());
         }

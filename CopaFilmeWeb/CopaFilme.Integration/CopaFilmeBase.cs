@@ -14,19 +14,27 @@ namespace CopaFilme.Integration
         Task<IEnumerable<FilmesResponse>> GetFilmesAsync(CancellationToken cancellationToken);
     }
 
+    public class UrlApi
+    {
+        public UrlApi(string uRL)
+        {
+            URL = uRL;
+        }
+
+        public string URL { get; set; }
+    }
+
     public class CopaFilmeBase: ICopaFilmeBase
     {
         private HttpClient _httpClient;
         private System.Lazy<JsonSerializerSettings> _settings;
 
-        public string BaseUrl
-        {
-            get { return "http://copafilmes.azurewebsites.net/api"; }
-        }
+        public string _baseUrl { get; }
 
-        public CopaFilmeBase(HttpClient httpClient)
+        public CopaFilmeBase(HttpClient httpClient, UrlApi baseUrl)
         {
             _httpClient = httpClient;
+            _baseUrl = baseUrl.URL;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(() =>
             {
                 var settings = new Newtonsoft.Json.JsonSerializerSettings();
@@ -107,7 +115,7 @@ namespace CopaFilme.Integration
         {
             var urlBuilder_ = new System.Text.StringBuilder();
 
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/filmes");
+            urlBuilder_.Append(_baseUrl != null ? _baseUrl.TrimEnd('/') : "").Append("/filmes");
 
             var client_ = _httpClient;
 
