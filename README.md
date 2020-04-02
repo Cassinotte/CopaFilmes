@@ -12,7 +12,7 @@ Aplicação consiste em uma seleção de 8 filmees pelo usuario e o resultado fi
 
 # Informações Iniciais
 
-### Dependecias necessarias
+### Ambiente desenvolvimento
 
 #### IDE (Integrated Development Environment )
 * Visual Studio 2019  - Version 16.5.1
@@ -22,6 +22,37 @@ Aplicação consiste em uma seleção de 8 filmees pelo usuario e o resultado fi
 
 * [NodeJs](https://nodejs.org/en/)
 * [AngularCLI](https://cli.angular.io/)
+* [SDK Net Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-# Desenvolvedor
+#### Configuração 
+
+* Configuração da URL da API de busca dos filmes e configurado no back-end no arquivo appsettings, no solução CopaFilmeWeb, como exemplificado abaixo: 
+
+```
+{
+  "ApiLamb": {
+    "Url": "http://copafilmes.azurewebsites.net/api"
+  }
+}
+
+```
+* Configuração do arquivo config.dev.json ou config.deploy.json no front-end referente a configuração da URL da API ( caminho src/assets/config )
+
+```
+{
+  "ApiBackend": "http://localhost/CopaFilmeWeb",
+  "MaxFilmes" : 8
+}
+
+
+```
+
+Obs. o back-end fiz a publicação direto no IIS atraves do Visual Studio, atraves da propriedade da solucao CopaWebFilme, conforme print abaixo:
+
+#### Execucao - Demostração
+
+
+
+
+# Autor
 Eduardo Aparecido Cassinotte
