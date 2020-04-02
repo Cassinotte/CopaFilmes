@@ -18,7 +18,7 @@ Aplicação consiste em uma seleção de 8 filmees pelo usuario e o resultado fi
 * Visual Studio 2019  - Version 16.5.1
 * Visual Studio Code - Version 1.43.2
 
-#### Dependencias
+#### Dependência
 
 * [NodeJs](https://nodejs.org/en/)
 * [AngularCLI](https://cli.angular.io/)
@@ -51,10 +51,38 @@ Obs. o back-end fiz a publicação direto no IIS atraves do Visual Studio, atrav
 
 ![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Configuracao%20IIS.PNG)
 
-#### Execucao - Demostração
+# Execucao - Demostração
+
+Swagger - Back-End
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Swagger.PNG)
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Swagger%202.PNG)
+
+Angular - Front-End
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Tela%201.PNG)
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Tela%202.PNG)
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Tela%203.PNG)
+
+# Teste Unitario e Teste Automatizado
+
+#### Abaixo demostração do Teste Unitario ( localizado na solução CopaFilme.TestUnit ):
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Teste%20Unitario.PNG)
+
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Teste%20Unitario%202.PNG)
+
+#### Abaixo demostração do Teste Automatizado ( localizado na solução CopaFilme.TesteAutomatizado :
 
 
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Teste%20Automatizado.PNG)
 
+![alt text](https://github.com/Cassinotte/CopaFilmes/blob/master/image/Teste%20Automatizado%202.PNG)
 
-# Autor
-Eduardo Aparecido Cassinotte
+# Autor projeto
+Eduardo Aparecido Cassinotte 
+ea.cassinotte@hotmail.com
+ea.cassinotte@gmail.com
