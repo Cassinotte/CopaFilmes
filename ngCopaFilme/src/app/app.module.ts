@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,11 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { AppConfig } from './app.config';
+
+export function initializeApp(appConfig: AppConfig) {
+  return () => appConfig.load();
+}
 
 @NgModule({
   declarations: [
@@ -22,11 +27,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     SharedModule.forRoot()
   ],
   providers: [
+    AppConfig,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [AppConfig],
+      multi: true
+    },
     {
       provide: 'ApiEndpoint',
-      useFactory: (endpoint: string) => "http://localhost/CopaFilmeWeb",
-      deps: []
-    }
+      useFactory: (endpoint: string) => AppConfig.settings.ApiBackend,
+      deps: [AppConfig]
+    },
+    {
+      provide: 'MaxFilmes',
+      useFactory: (endpoint: string) => AppConfig.settings.MaxFilmes,
+      deps: [AppConfig]
+    },
   ],
   bootstrap: [AppComponent]
 })

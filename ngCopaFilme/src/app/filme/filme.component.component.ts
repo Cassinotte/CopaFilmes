@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FilmeService} from './filme.service';
 import { FormGroup } from '@angular/forms';
 import { FilmeValidator } from './filme.validator';
@@ -11,12 +11,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FilmeComponentComponent implements OnInit {
 
-  maxFilme: number = 8;
-
   formFilme: FormGroup;
 
   constructor(private _service: FilmeService, private _validator: FilmeValidator,
-    private _router: Router, private _route: ActivatedRoute) { }
+    private _router: Router, private _route: ActivatedRoute,
+    @Inject('MaxFilmes') public maxFilme: number) {
+
+  }
 
   ngOnInit(): void {
 

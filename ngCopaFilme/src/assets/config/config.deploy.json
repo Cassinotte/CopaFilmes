@@ -1,0 +1,4 @@
+{
+  "ApiBackend": "http://localhost/CopaFilmeWeb",
+  "MaxFilmes" : 8
+}

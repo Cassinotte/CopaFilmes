@@ -6,7 +6,7 @@
 
       <h3>Fase de Seleção</h3>
 
-      <hr class="border-white w-25" />
+      <hr class="border-white wcustom-5" />
 
       <p class="pt-4 ml-3 mr-3">
         Selecione {{ maxFilme }} filmes que você deseja que entrem na competição e depois pressione o
@@ -19,7 +19,7 @@
 
   <form [formGroup]="formFilme" (ngSubmit)="onSubmit()" *ngIf="formFilme" class="needs-validation">
 
-    <div class="row justify-content-between pt-2">
+    <div class="row justify-content-between pt-3">
 
       <div class="col-2">
         <p class="font-weight-bold text-white">Selecionados {{ countCheck() }} de {{ maxFilme }} filmes</p>
@@ -31,7 +31,7 @@
 
     </div>
 
-    <div class="row pt-5">
+    <div class="row pt-3">
 
 
       <app-indicacao-formarray [formArray]="formFilme.controls.Filmes"></app-indicacao-formarray>

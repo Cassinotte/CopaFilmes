@@ -1,11 +1,12 @@
 <form [formGroup]="model" class="needs-validation">
 
-  <div class="bg-white p-3">
+  <div class="bg-white p-4 pl-3">
 
     <div class="chiller_cb">
       <input attr.id="filmeCh{{index}}" type="checkbox" formControlName="check">
       <label attr.for="filmeCh{{index}}">
-        {{ model.value.titulo }}
+        <b>{{ model.value.titulo }}</b>
+        <br />
         {{ model.value.ano }}
       </label>
       <span></span>

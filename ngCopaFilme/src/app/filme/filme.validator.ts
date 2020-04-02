@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, FormArray, AbstractControl, ValidatorFn } from '@angular/forms';
 import { FilmesResponse } from '../models/filmes.response';
 import { ToastService } from '../../shared/toast/toast.service';
@@ -6,7 +6,8 @@ import { ToastService } from '../../shared/toast/toast.service';
 @Injectable()
 export class FilmeValidator {
 
-  constructor(private _formBuilder: FormBuilder, private _toastService: ToastService) {
+  constructor(private _formBuilder: FormBuilder, private _toastService: ToastService,
+    @Inject('MaxFilmes') public maxFilme: number) {
 
   }
 
@@ -82,7 +83,7 @@ export class FilmeValidator {
 
     return (formArray: FormArray): { [key: string]: any } | null => {
 
-      return this.getFormArray(null, formArray).length > 8 ? { limit: 'Excedeu limite de seleção' } : null;
+      return this.getFormArray(null, formArray).length > this.maxFilme ? { limit: 'Excedeu limite de seleção' } : null;
     }
   }
 
@@ -90,7 +91,7 @@ export class FilmeValidator {
 
     return (formArray: FormArray): { [key: string]: any } | null => {
 
-      return this.getFormArray(null, formArray).length === 8 ? null : { exact: 'Selecione exatamente 8 filmes' } ;
+      return this.getFormArray(null, formArray).length === this.maxFilme ? null : { exact: 'Selecione exatamente 8 filmes' } ;
     }
   }
 
