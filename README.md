@@ -49,6 +49,8 @@ Aplicação consiste em uma seleção de 8 filmees pelo usuario e o resultado fi
 
 Obs. o back-end fiz a publicação direto no IIS atraves do Visual Studio, atraves da propriedade da solucao CopaWebFilme, conforme print abaixo:
 
+![](images/Configuracao%20IIS.png)
+
 #### Execucao - Demostração
 
 
